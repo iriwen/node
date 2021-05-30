@@ -10,10 +10,10 @@ const server = http.createServer((request, response) => {
     request.on("end", () => {
         var method = request.method;
         var headers = JSON.stringify(request.headers);
-        var httpVersion = request.httpVersion; 
+        var httpVersion = request.httpVersion;
 
         var url = request.url;
-        response.writeHead(200, {"Content-Type":"text/html"});
+        response.writeHead(200, { "Content-Type": "text/html" });
         let responseData =
             method + "[d]" + headers + "[d]" + httpVersion + "[d]" + url;
         response.end(responseData);
