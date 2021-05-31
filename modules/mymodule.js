@@ -8,5 +8,4 @@ var operation = function(number){
 exports.info = info;
 
 exports.myOperation = operation;
-
 //module.exports =testModule;
