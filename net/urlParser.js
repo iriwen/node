@@ -1,4 +1,5 @@
 const url = require("url");
+
 const urlStr = 'www.google.com?key=youtube';
 
 const result = url.parse(urlStr);
@@ -11,3 +12,4 @@ var urlObj = {
     pathname:"/teach/content.html"
 };
 console.log(url.format(urlObj));
+
