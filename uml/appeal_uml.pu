@@ -1,0 +1,22 @@
+@startuml
+
+start
+:cportal获取请求头用户相关信息userId;
+if (提交申诉记录参数校验) then (true)
+    :提交申诉记录;
+    if ("用户是否存在申诉中的记录") then (yes)
+        :返回异常信息，存在申诉中的记录;
+    else (no)
+        if ("新增申诉记录") then (yes)
+            :"返回提交申诉成功响应";
+        else (no)
+            :"切面拦截异常信息，封装响应体";
+        endif
+    endif
+    :"返回响应信息";
+else (no)    
+endif  
+    :"结束"; 
+    
+stop
+@enduml
