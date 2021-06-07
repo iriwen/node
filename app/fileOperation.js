@@ -1,9 +1,4 @@
 //node操作文件都是通过原生模块fs实现的，fs中的多数api来说，node都提供了同步和异步两个版本
-<<<<<<< HEAD
-// xxxsync 是同步方法
-const fs = require('fs');
-fs.readFile('package2.json', 'utf-8',  (error, data)=> {
-=======
 // xxxsync 是同步方法，不加sync是异步的方式，尽可能使用异步版本
 const fs = require('fs');
 const path = require('path');
@@ -72,5 +67,4 @@ fs.unlink('nodetest.txt', (error) => {
         throw error;
     }
     console.log("removed !");
-})
->>>>>>> master
+});
